@@ -9,6 +9,10 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+.agents
+.claude
+.cursor
+.devin
 
 # testing
 /coverage
@@ -39,3 +43,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+node_modules/
+dist/
+.env
+
+/lib/generated/prisma
+
+/lib/generated/prisma
