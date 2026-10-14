@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ecommerce-next
 
-## Getting Started
+An open-source ecommerce storefront built with Next.js, designed first for
+**personalized-products workshops** — sublimation, printing, engraving and
+promotional-product shops that sell made-to-order items.
 
-First, run the development server:
+> Status: early skeleton. The full route map is in place; most pages are
+> placeholders and the data model is just getting started. Contributions
+> and feedback are welcome.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features (planned / in progress)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Storefront:** products, categories, cart and checkout
+- **Customer account:** orders, addresses, wishlist
+- **Admin panel:** products with brands, industries, materials, variants
+  and media; orders with taxes, discounts and shipping packages;
+  home-page customization
+- **Themes:** every theme is a complete storefront design (Shopify-style),
+  not a color scheme — switching themes rebuilds the look of the whole store
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 16 + React 19
+- Prisma 7 with the MariaDB/MySQL adapter
+- better-auth
+- Tailwind CSS 4
+- pnpm
 
-## Learn More
+## Getting started
 
-To learn more about Next.js, take a look at the following resources:
+    pnpm install
+    cp .env.example .env   # set your database and auth variables
+    pnpm dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Prisma schema beyond the User model (products, variants, orders)
+2. Real products API (today `/api/products` is a stub)
+3. First complete storefront theme
+4. Cart and checkout flow
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT — see LICENSE.
